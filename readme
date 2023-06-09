@@ -1,0 +1,196 @@
+========================================================
+Teknős rajzizé
+
+moveForward(100);
+turnRight(90);
+moveBackward(100);
+
+
+for (var count = 0; count < 5; count++) {        ismétlés
+  moveForward();
+}
+
+while (notFinished()) {                         ismétli, amíg van út, előre megy
+  moveForward();
+}
+
+if (isPathLeft()) {                              ha van út baloldalt, előre megy
+  moveForward();
+}
+
+while (notFinished()) {                          ismétli, ha van út előtte, előre megy, különben balra fordul
+  if (isPathForward()) {
+    moveForward();                              
+  } else {
+    turnLeft();
+  }
+}
+
+
+penColour('#228b22');                          szinbeállítás
+
+penColour(colour_random());
+
+dig();                                         ásás
+
+fill();                                        feltöltés { }
+
+============================================================
+Fogalmak:
+
+szekvencia = parancsok többszörös ismétlésére szolgál
+ciklusok = egy nagyobb parancssor lefuttatása
+függvények = hát ezt matekban sem tudom
+elágazás = több választás i guess
+1kbyte=1000byte
+1kibyte=1024byte
+2**16 = 65000
+
+=============================================================
+VS Code
+Base dolgok
+
+alt + z   sortörés
+ctrl + s  mentés
+ctrl + z  visszalépés
+
+
+<!-- --> megjegyzés
+<title>
+<h1-6> nagybetű
+<p> cimsor
+<ul> ( soronként <li> ) pontos lista <ul> <li> </ul>
+<ol> ( soronként <li> ) számos listaelem <ul> <ol> </ul>
+<a href="hivatkozás">linknév</a> link
+<hr> egyenes vonal
+<b> félkövér
+<u> aláhúzott
+<i> dőlt
+<div> ehhez egy style szükséges
+width szélesség
+height magasság
+<img src=> kép beszúrás
+h2 style="color: blue">CatPhotoApp</h2>
+
+--------------------------------------------------------------
+táblázat
+
+<table> táblázat
+<thead> táblázat adatok
+<tbody> táblázat tartalom
+<tr> új sor
+<td> új oszlop
+<th> címsor
+table>tr*2>td*2 gyors tablazat
+
+colspan = cella egyesités
+rowspan = sor egyesités
+
+Cellaegyesítés
+<tr>
+    <th rowspan="2">Name</th>
+    <th rowspan="2">ID</th>
+    <th colspan="2">Membership Dates</th>
+    <th rowspan="2">Balance</th>
+  </tr>
+  <tr>
+    <th>Joined</th>
+    <th>Canceled</th>
+  </tr>
+
+content tartalom
+padding belső réteg
+border középső réteg
+margin legkülső réteg
+---------------------------------------------------
+szovegigazitas
+
+bgcolor="akarmilyen szin"> háttérszín
+text-align:  szöveg igazitás
+---------------------------------------------------
+CSS
+
+. osztály
+# id
+
+<link rel="stylesheet" href="style.css"> ( CSS a head-ben is lehet csinálni )
+
+<style type="text/css">
+        a {
+                        color: #C0C0C0;
+        }
+        a:visited {
+                        color: #C0C0C0;
+        }
+        a:active {
+                        color: #C0C0C0;
+        }
+        a:hover {
+                        color: #C0C0C0;
+        }
+</style>
+--------------------------------------------------
+Hover = ráviszed az egeret
+
+-------------------------------------------------
+
+<body>
+<div id="elem"> 
+</body>
+css: #elem { margin:20px border:20px padding:20px }
+
+
+background-image: url("screenshot.jpg");
+outset fancy design
+
+===================================================
+java&javascript
+
+értelmezo és forditonyelvek
+// soros komment
+/* kommment több sorban */
+
+===================================================
+Bootstrap
+
+gomb esetében:
+	      1. bootstrap/docs/components/buttons/ az egyik bemásolása
+	      2. Bootstrap menu/Include via CDN/felsőt headbe, alsót bodyba kell másolni
+--------------------------------------------------
+Reszponziv oldal:
+Alkalmazkodik az adott platformhoz és esztétikusan jelenik meg rajta.
+
+Megvalósítás:
+css/css framework
+container: változó dobozszélességhez osztály
+12 oszlop áll rendelkezésre soronként a megjelenítéskor
+
+1. Bootstrap/css link másolása a headbe/közvetlen utána a saját css belinkelése
+2. css
+      .box1 { border: red; }
+
+3. <div class="container box1"> Lorem40 </div>
+             vagy
+<div class="container">
+<div class="row">
+<div class="col-12 col-md-4 col-xl-3> Lorem50  </div>
+<div class="col-12 col-md-6 col-xl-6> Lorem40  </div>
+<div class="col-12 col-md-2 col-xl-3> Lorem30  </div>
+</div>
+</div>
+--------------------------------------------------
+Szövegigazítás
+
+függőlegesen:<div class="container"><div class= "row align-items-(start/center/end)> Lorem40 </div></div>
+vizszintesen:<div class="container"><div class= "row justify-content-(start/center/end)> Lorem40 </div></div>
+margók:bootstrap/spacing
+
+képek reszponziv oldalon:
+<img src="kép.jpg" class="img-fluid">
+
+HTML Block és Inline
+Block: mindig uj sorban kezdődik, kitölti a teljes sort
+Inline: Nem kezdődnek új sorban, csak annyi teret foglal, amennyi szükséges
+
+
+====================================================
